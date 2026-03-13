@@ -86,7 +86,7 @@
     <nav class="fixed top-0 w-full z-50 glass-card border-none bg-opacity-80">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <!-- Replaced SRG.DATA with Resume Button -->
-            <a href="assets/resume_final.pdf" target="_blank" class="flex items-center space-x-2 glass-card px-4 py-2 rounded-xl hover:border-blue-400 transition group">
+            <a href="assets/resume_portfolio.pdf" target="_blank" class="flex items-center space-x-2 glass-card px-4 py-2 rounded-xl hover:border-blue-400 transition group">
                 <i class="fas fa-file-pdf text-red-500 group-hover:scale-110 transition"></i>
                 <span class="text-xs font-extrabold tracking-widest text-white uppercase">Resume</span>
             </a>
@@ -188,7 +188,7 @@
                     </div>
                     <h3 class="text-xl font-bold mb-4 text-blue-400">Visualization</h3>
                     <ul class="space-y-2 text-gray-400 text-sm">
-                        <li>• Power BI (Measures & Data Modeling)</li>
+                        <li>• Power BI (DAX & Data Modeling)</li>
                         <li>• Intermediate MS Excel</li>
                         <li>• Interactive Dashboards</li>
                         <li>• Report Automation</li>
@@ -202,8 +202,8 @@
                     </div>
                     <h3 class="text-xl font-bold mb-4 text-purple-400">Programming</h3>
                     <ul class="space-y-2 text-gray-400 text-sm">
-                        <li>• Python (Pandas/Matplotlib)</li>
-                        <li>• SQL (Complex Joins/Queries)</li>
+                        <li>• Python (Pandas/Matplotlib/Requests)</li>
+                        <li>• SQL (Complex Joins/Queries, CTE's)</li>
                         <li>• API Data Extraction</li>
                         <li>• Script Automation</li>
                     </ul>
@@ -279,7 +279,7 @@
                         </div>
                     </div>
                     <div class="bg-gray-800 h-full flex items-center justify-center p-4 order-1 md:order-2">
-                        <img src="images/retail_dashboard.png" alt="Retail Dashboard" class="rounded-xl shadow-2xl border border-gray-700 group-hover:scale-105 transition duration-500">
+                        <img src="images/retail_business.png" alt="Retail Dashboard" class="rounded-xl shadow-2xl border border-gray-700 group-hover:scale-105 transition duration-500">
                     </div>
                 </div>
             </div>
@@ -364,13 +364,6 @@
                         r.salilgupta01@gmail.com
                     </div>
                 </div>
-                <!-- Phone Icon -->
-                <div class="relative group">
-                    <button onclick="copyToClipboard('+919717238180')" class="text-gray-500 hover:text-green-500 transition"><i class="fas fa-phone"></i></button>
-                    <div id="phone-flyout" class="absolute bottom-full mb-2 w-auto p-2 text-xs text-white bg-gray-800 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        +91 9717238180
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -379,20 +372,6 @@
     <footer class="py-12 border-t border-gray-800 text-center text-gray-600 text-sm">
         <p>© 2026 Salil Raj Gupta. Built with Passion & Data.</p>
     </footer>
-
-    <script>
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(function() {
-                var flyout = document.getElementById('phone-flyout');
-                flyout.innerHTML = 'Copied!';
-                setTimeout(function() {
-                    flyout.innerHTML = '+91 9717238180';
-                }, 2000);
-            }, function(err) {
-                console.error('Could not copy text: ', err);
-            });
-        }
-    </script>
 
 </body>
 </html>
