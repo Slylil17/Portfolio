@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceX Analysis | Salil Raj Gupta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #030712;
+            color: #f3f4f6;
+            scroll-behavior: smooth;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #60a5fa, #a78bfa, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-card {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-link:hover { color: #60a5fa; }
+
+        .prose-text {
+            line-height: 1.8;
+            color: #9ca3af;
+        }
+
+        .star-label {
+            font-weight: 800;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #60a5fa;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-card border-none bg-opacity-80">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold tracking-tighter gradient-text">PORTFOLIO</a>
+            <div class="flex space-x-6 text-sm font-medium text-gray-400">
+                <a href="index.html" class="nav-link"><i class="fas fa-arrow-left mr-2"></i> Back to Portfolio</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header class="pt-32 pb-16 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <div class="flex items-center space-x-4 mb-6">
+                <span class="px-3 py-1 bg-purple-600 bg-opacity-20 text-purple-400 rounded-full text-xs font-bold uppercase">Python Analysis</span>
+                <span class="px-3 py-1 bg-blue-600 bg-opacity-20 text-blue-400 rounded-full text-xs font-bold uppercase">REST API</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">SpaceX <span class="gradient-text">Launch Trends </span>& operational Analysis</h1>
+            <p class="text-xl text-gray-400 leading-relaxed">Verifying global launch statistics by processing raw mission logs directly from the SpaceX API.</p>
+        </div>
+        <!-- Background Blur -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-purple-600 opacity-10 blur-[100px] -z-10"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-6 pb-24">
+        
+        <!-- Project Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+            <div class="glass-card p-6 rounded-2xl text-center">
+                <div class="text-sm text-gray-500 mb-1">Tools</div>
+                <div class="font-bold text-white">Python, Pandas</div>
+            </div>
+            <div class="glass-card p-6 rounded-2xl text-center">
+                <div class="text-sm text-gray-500 mb-1">Viz Library</div>
+                <div class="font-bold text-white">Seaborn</div>
+            </div>
+            <div class="glass-card p-6 rounded-2xl text-center">
+                <div class="text-sm text-gray-500 mb-1">Complexity</div>
+                <div class="font-bold text-white">Data Joining</div>
+            </div>
+            <div class="glass-card p-6 rounded-2xl text-center">
+                <div class="text-sm text-gray-500 mb-1">Focus</div>
+                <div class="font-bold text-white">Integrity</div>
+            </div>
+        </div>
+
+        <!-- STAR Section -->
+        <div class="space-y-20">
+            
+            <!-- Situation -->
+            <section>
+                <span class="star-label">Situation</span>
+                <h3 class="text-2xl font-bold mb-4 text-white">The Challenge of Official Statistics</h3>
+                <p class="prose-text text-lg">
+                    While SpaceX provides summarized success rates, I wanted to build a system that verifies these numbers independently. The challenge was to pull multi-dimensional data from disparate API endpoints (Launches, Launchpads, and Rockets) and consolidate them into a single source of truth for auditing purposes.
+                </p>
+            </section>
+
+            <!-- Task -->
+            <section>
+                <span class="star-label">Task</span>
+                <h3 class="text-2xl font-bold mb-4 text-white">Objective & Scope</h3>
+                <p class="prose-text">
+                    My objective was to automate the data extraction process and perform exploratory data analysis (EDA) to answer two key questions:
+                </p>
+                <ul class="list-disc list-inside prose-text mt-4 space-y-2">
+                    <li>How has recovery technology improved mission success rates over time?</li>
+                    <li> Does a specific launchpad correlate with mission failure rates?</li>
+                </ul>
+            </section>
+
+            <!-- Action -->
+            <section>
+                <span class="star-label">Action</span>
+                <h3 class="text-2xl font-bold mb-4 text-white">The "Audit" Mindset in Data Joining</h3>
+                <p class="prose-text mb-8">
+                    Applying my <strong class="text-white font-bold">Chartered Accountancy background</strong>, I approached the data joining process like a financial reconciliation. Instead of using the pre-calculated success columns in the Launchpad table, I performed an <span class="text-white font-semibold">Inner Join</span> between the raw mission logs and the infrastructure metadata.
+                </p>
+                
+                <div class="flex flex-col md:flex-row gap-8 mb-8">
+                    <div class="glass-card p-8 rounded-3xl">
+                        <h4 class="text-blue-400 font-bold mb-4">Acutal Data From SPACEX </h4>
+                        <p class="text-sm text-gray-400 italic mb-6">"I compared the actual SPACEX data using the launchpads table."</p>
+                        <img src="images/official_spacex_stats.png" alt="Success Rate Plot" class="w-full rounded-xl border border-gray-800 shadow-2xl">
+                        <p class="text-center text-xs text-gray-500 mt-4">Fig 2: Plotting calculated success rates provided by SPACEX API.</p>
+                    </div>
+                    <div class="glass-card p-8 rounded-3xl">
+                        <h4 class="text-blue-400 font-bold mb-4">Verification Logic</h4>
+                        <p class="text-sm text-gray-400 italic mb-6">"I converted boolean success flags into binary (1/0) integers and calculated the mean across joined datasets to verify official reports."</p>
+                        <img src="images/calculated_success_rate.png" alt="Launches vs. Success Plot" class="w-full rounded-xl border border-gray-800 shadow-2xl">
+                        <p class="text-center text-xs text-gray-500 mt-4">Fig 1: Manually calculated success rates verified via raw launch logs.</p>
+                    </div>
+                </div>
+
+                <p class="prose-text">
+                    I utilized <strong class="text-white font-bold">Seaborn</strong> for high-fidelity visualizations, focusing on "failure gaps"—the visual distance between total attempts and successful outcomes. This allowed for an immediate visual audit of each launch site's operational efficiency.
+                </p>
+
+                <div class="flex flex-col md:flex-row gap-8 mb-8">
+                    <div class="glass-card p-8 rounded-3xl">
+                        <h4 class="text-blue-400 font-bold mb-4">Fairings Recovery Attempts</h4>
+                        <p class="text-sm text-gray-400 italic mb-6">"Analyzing the attempts of fairing recovery and successes."</p>
+                        <img src="images/fairings_recovery_attemps.png" alt="Fairings Recovery" class="w-full rounded-xl border border-gray-800 shadow-2xl">
+                        <p class="text-center text-xs text-gray-500 mt-4">Fig 3: Fairings recovery attempts.</p>
+                    </div>
+                    <div class="glass-card p-8 rounded-3xl">
+                        <h4 class="text-blue-400 font-bold mb-4">Fairings Recovery Success trend</h4>
+                        <p class="text-sm text-gray-400 italic mb-6">"Analyzing the Success Rate of Recovery Over the Years."</p>
+                        <img src="images/fairings_recover_rate_over_time.png" alt="Fairings Recovery Success" class="w-full rounded-xl border border-gray-800 shadow-2xl">
+                        <p class="text-center text-xs text-gray-500 mt-4">Fig 4: Fairings recovery trend.</p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Result -->
+            <section>
+                <span class="star-label">Result</span>
+                <h3 class="text-2xl font-bold mb-4 text-white">Insights & Takeaways</h3>
+                <div class="flex flex-col md:flex-row gap-8 mt-8 items-center">
+                    <div class="md:w-1/2 space-y-4">
+                        <div class="p-4 bg-gray-900 rounded-xl border-l-4 border-green-500">
+                            <h5 class="font-bold text-white mb-1 text-sm">Infrastructure Growth</h5>
+                            <p class="text-xs text-gray-400">Verified that with the improvement in technology, successful launches have skyrocketed since 2020.</p>
+                        </div>
+                        <div class="p-4 bg-gray-900 rounded-xl border-l-4 border-blue-500">
+                            <h5 class="font-bold text-white mb-1 text-sm">Recovery Trends</h5>
+                            <p class="text-xs text-gray-400">Observed that with time, more money is invested in improving recovery systems so as to reduce the overall cost of launcing new Rockets by "Reusing" Fairings.</p>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 glass-card p-4 rounded-xl">
+                        <img src="images/successful_launch_trends.png" alt="Successful Laucnch Trend" class="w-full rounded-xl border border-gray-800 shadow-2xl">
+                        <p class="text-[10px] text-cyan-500 text-center mt-2">visualization of successful launch trend</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- GitHub Call to Action -->
+            <section class="pt-12 border-t border-gray-800 text-center">
+                <h3 class="text-2xl font-bold mb-6">Want to see the raw Python code?</h3>
+                <p class="text-gray-400 mb-8 max-w-lg mx-auto">The full Jupyter Notebook, including API extraction logic and Seaborn formatting, is available on my GitHub.</p>
+                <a href="https://github.com/Slylil17/SpaceX-Launch-Analysis" target="_blank" class="inline-flex items-center bg-white text-black font-extrabold py-4 px-10 rounded-2xl hover:bg-blue-500 hover:text-white transition-all transform hover:scale-105">
+                    <i class="fab fa-github mr-3 text-xl"></i> Explore Repository
+                </a>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-gray-800 text-center text-gray-600 text-sm">
+        <p>© 2026 Salil Raj Gupta. Data verified via SpaceX API.</p>
+    </footer>
+
+</body>
+</html>

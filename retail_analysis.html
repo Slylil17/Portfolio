@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retail Analysis | Salil Raj Gupta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #030712;
+            color: #f3f4f6;
+            scroll-behavior: smooth;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #60a5fa, #a78bfa, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-card {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-link:hover { color: #60a5fa; }
+
+        .prose-text {
+            line-height: 1.8;
+            color: #9ca3af;
+        }
+
+        .star-label {
+            font-weight: 800;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #60a5fa;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-card border-none bg-opacity-80">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold tracking-tighter gradient-text">SRG.DATA</a>
+            <div class="flex space-x-6 text-sm font-medium text-gray-400">
+                <a href="index.html" class="nav-link"><i class="fas fa-arrow-left mr-2"></i> Back to Portfolio</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header class="pt-32 pb-16 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <div class="flex items-center space-x-4 mb-6">
+                <span class="px-3 py-1 bg-blue-600 bg-opacity-20 text-blue-400 rounded-full text-xs font-bold uppercase">Power BI</span>
+                <span class="px-3 py-1 bg-green-600 bg-opacity-20 text-green-400 rounded-full text-xs font-bold uppercase">SQL</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">End-to-End Retail <span class="gradient-text">Performance</span> Dashboard</h1>
+            <p class="text-xl text-gray-400 leading-relaxed">A comprehensive Business Intelligence solution to monitor and analyze retail operations, from sales performance to regional profitability.</p>
+        </div>
+        <div class="absolute top-0 left-0 w-96 h-96 bg-blue-600 opacity-10 blur-[100px] -z-10"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-6 pb-24">
+        
+        <div class="glass-card p-8 rounded-3xl mb-12">
+            <img src="images/retail-dashboard.png" alt="Retail Performance Dashboard" class="w-full rounded-xl border border-gray-800 shadow-2xl">
+        </div>
+
+        <div class="space-y-20">
+            
+            <!-- Situation -->
+            <section>
+                <span class="star-label">Situation</span>
+                <h3 class="text-2xl font-bold mb-4 text-white">Scattered Data, Unclear Insights</h3>
+                <p class="prose-text text-lg">
+                    A mid-sized retail company was struggling to get a holistic view of its performance. Sales data was stored in one database, customer information in another, and product details in a third. This data fragmentation made it nearly impossible to perform cross-functional analysis, leading to reactive decision-making and missed opportunities.
+                </p>
+            </section>
+
+            <!-- Task -->
+            <section>
+                <span class="star-label">Task</span>
+                <h3 class="text-2xl font-bold mb-4 text-white">Objective & Key Metrics</h3>
+                <p class="prose-text">
+                    The primary objective was to design and build a centralized, interactive dashboard in Power BI. The dashboard needed to consolidate the disparate data sources and provide at-a-glance insights into critical business areas. Key Performance Indicators (KPIs) were defined to measure success, focusing on profitability, sales effectiveness, and customer behavior.
+                </p>
+            </section>
+
+            <!-- Action -->
+            <section>
+                <span class="star-label">Action</span>
+                <h3 class="text-2xl font-bold mb-4 text-white">Data Modeling & Visualization Strategy</h3>
+                <p class="prose-text mb-8">
+                    The first step was to perform ETL (Extract, Transform, Load). I used SQL to clean the raw data, handle missing values, and join the core tables. To ensure optimal performance and scalability in Power BI, I structured the data using a <span class="text-white font-semibold">Star Schema</span>. This involved creating a central fact table (e.g., Sales) connected to multiple dimension tables (e.g., Customers, Products, Dates).
+                </p>
+                <p class="prose-text mb-8">
+                    Within Power BI, I used <span class="text-white font-semibold">DAX (Data Analysis Expressions)</span> to create powerful calculated measures. These weren't just simple sums; they were complex calculations for metrics like Year-over-Year Growth, Gross Profit Margin, and Average Transaction Value, which are crucial for deep financial analysis.
+                </p>
+            </section>
+
+            <!-- Domain Expertise Section -->
+            <section class="glass-card p-8 rounded-3xl border-l-4 border-blue-500">
+                <h3 class="text-2xl font-bold mb-4 text-white">Domain Expertise: The Financial Perspective</h3>
+                <p class="prose-text mb-6">
+                    As a former CA student, my approach to data modeling is grounded in financial rigor. It's not just about visualizing data; it's about ensuring the numbers tell an accurate and meaningful story that aligns with core accounting principles.
+                </p>
+                <ul class="list-disc list-inside prose-text mt-4 space-y-3">
+                    <li><span class="text-white font-semibold">Gross Profit Margin:</span> My DAX formulas were structured to correctly account for Cost of Goods Sold (COGS) against revenue, providing a true measure of profitability per product.</li>
+                    <li><span class="text-white font-semibold">Regional Contribution:</span> The data model was designed to allow for precise slicing of data by region, showing not just sales volume but also each region's net contribution to the bottom line.</li>
+                    <li><span class="text-white font-semibold">Operational Liquidity:</span> While not directly a sales metric, the dashboard included data points that could be used to analyze inventory turnover and its impact on cash flow, reflecting an understanding of the broader financial picture.</li>
+                </ul>
+            </section>
+
+            <!-- Result -->
+            <section>
+                <span class="star-label">Result</span>
+                <h3 class="text-2xl font-bold mb-4 text-white">Actionable Insights & Improved Efficiency</h3>
+                <div class="space-y-4 prose-text">
+                    <p>The final dashboard provided a single source of truth for the entire organization. Stakeholders could now interact with the data, drill down into specifics, and identify trends that were previously hidden.</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><span class="text-white">Reduced reporting time by 90%</span> by automating the data pipeline.</li>
+                        <li>Identified the top 10% most profitable products, allowing for targeted marketing campaigns.</li>
+                        <li>Revealed that the North region, despite having lower sales volume, had a 15% higher profit margin than the South region.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- GitHub Call to Action -->
+            <section class="pt-12 border-t border-gray-800 text-center">
+                <h3 class="text-2xl font-bold mb-6">Want to see the documentation?</h3>
+                <p class="text-gray-400 mb-8 max-w-lg mx-auto">The full documentation, including the data model and DAX formulas, is available on my GitHub.</p>
+                <a href="#" class="inline-flex items-center bg-white text-black font-extrabold py-4 px-10 rounded-2xl hover:bg-blue-500 hover:text-white transition-all transform hover:scale-105">
+                    <i class="fab fa-github mr-3 text-xl"></i> View Documentation on GitHub
+                </a>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-gray-800 text-center text-gray-600 text-sm">
+        <p>© 2026 Salil Raj Gupta. Built with Passion & Data.</p>
+    </footer>
+
+</body>
+</html>
